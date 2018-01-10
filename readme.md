@@ -5,6 +5,7 @@ title: ML Articles Reading Notes
 # ML Articles Reading Notes
 
 ## Evolution Strategies
+
 - [Salimans 2017](https://arxiv.org/pdf/1703.03864.pdf): Evolution Strategies as a Scalable Alternative to Reinforcement Learning, [notes](./evolution-strategies/2017-09-salimans.md)
 
 ## Numerical Analysis
