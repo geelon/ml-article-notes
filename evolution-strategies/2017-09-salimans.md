@@ -29,3 +29,4 @@ And when $p_\psi$ is factored Gaussian (?? what is meant by factored
 [simultaneous perturbation stochastic approximation (Spall 1992)](http://www.jhuapl.edu/spsa/pdf-spsa/spall_tac92.pdf),
 [parameter exploring policy gradients (Sehnke 2010)](http://kyb.mpg.de/fileadmin/user_upload/files/publications/attachments/Neural-Networks-2010-Sehnke_%5b0%5d.pdf),
 and [zero-order gradient estimation (Nesterov 2011)](https://core.ac.uk/download/pdf/6340930.pdf). 
+
