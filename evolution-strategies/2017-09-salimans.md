@@ -91,7 +91,7 @@ the case ??)
   G(\psi) = \nabla_\psi \int_{\Theta} f(\theta) g(\psi - \theta)
   d\theta.$$
   Why is Equation (2) an estimator? That is:
-  $$\nabla_\psi G(\psi) = \int_Theta f(\theta) \nabla_\psi \log g(\psi
+  $$\nabla_\psi G(\psi) = \int_\Theta f(\theta) \nabla_\psi \log g(\psi
   - \theta) d\theta.$$
 
 **Question 2:** The current ES algorithm convolves the objective
