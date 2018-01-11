@@ -13,17 +13,17 @@ the best *point* (or *individual*) inside the parameter space.
 
 Evolution strategies (ES) frames the search problem in terms of
 *populations* instead of individuals. Each parameter $\psi$
-represents a population's 'genotype', but the genotype of each
-individual is 'mutated' or perturbed. The goal is to maximize the
+represents a population's 'genotype', while the individual's genotype
+a mutation/perturbation of $\psi$. The goal is to maximize the
 'fitness' of the population instead of the individual.
 
 Mathematically, the 'population genotype' $\psi$ corresponds to a
-distribution of 'individual genotypes' $\theta \sim p_\psi$. The goal
+distribution of 'individual genotypes', $\theta \sim p_\psi$. The goal
 is then to maximize the expected objective function:
 $$\mathbb{E}_{\theta \sim p_\psi} F(\theta).$$
 This may be done using gradient ascent/descent, the gradient is
 estimated by:
-$$\nabla_\psi \mathbb{E}_{\theta \sim p_\psi} F(\theta) \approx
+$$\nabla_\psi \mathbb{E}_{\theta \sim p_\psi} F(\theta) =
 \mathbb{E}_{\theta \sim p_\psi} \big\{F(\theta) \nabla_\psi \log
 p_\psi(\theta)\big\}.$$
 And when $p_\psi$ is factored Gaussian (?? what is meant by factored
@@ -40,7 +40,7 @@ $\theta$, and estimated by
 $$\nabla_\theta \mathbb{E}_{\epsilon \sim \mathcal{N}(0,I)} F(\theta +
 \sigma \epsilon) = \frac{1}{\sigma} \mathbb{E}_{\epsilon \sim
 \mathcal{N}(0,I)} \big\{F(\theta + \sigma \epsilon) \epsilon\big\},$$
-which may be estimated by samples, yielding the natural algorithm
+which may be approximated by samples, yielding the natural algorithm
 labeled Algorithm 1 in the paper. This algorithm is easily
 parallelizable, given as Algorithm 2.
 
@@ -64,8 +64,8 @@ As the dimension $T$ of $\mathbf{a}(\theta)$ grows, the corresponding
 policy gradient estimator for $\nabla_\theta F(\theta)$ will have
 variance that scales with
 $$\sum_{t=1}^T \nabla_\theta \log p(a_t; \theta),$$
-so that the variance grows about linearly with $T$. The estimator
-using ES is independent of $T$.
+so that the variance grows about linearly with $T$. In contrast, the
+estimator using ES is independent of $T$.
 
 ### Interpretation as Finite Differences
 
@@ -74,11 +74,12 @@ Using the fact that $\mathbb{E}_{\epsilon \sim \mathcal{N}(0,I)}
 $$\mathbb{E}_{\theta \sim \mathcal{N}(0,I)} \big\{F(\theta + \sigma
 \epsilon) \epsilon / \sigma\big\} = \mathbb{E}_{\theta \sim
 \mathcal{N}(0,I)} \big\{(F(\theta + \sigma \epsilon) -
-F(\theta))\epsilon / \sigma\big\}$$, so that we can interpret ES as
-computing finite differences in a randomly chosen direction.
+F(\theta))\epsilon / \sigma\big\},$$
+so that we can interpret ES as computing finite differences in a
+randomly chosen direction.
 
 This suggests that, as finite differences methods scale poorly with
-dimension of $\theta$, that ES may also scale poorly. But the
+dimension of $\theta$, ES may also scale poorly. But the
 dimension perhaps depends more on the effective dimensionality of the
 optimization problem and not of the learning model. (?? why is this
 the case ??)
@@ -93,18 +94,22 @@ the case ??)
   Why is Equation (2) an estimator? That is:
   $$\nabla_\psi G(\psi) = \int_\Theta f(\theta) \nabla_\psi \log g(\psi
   - \theta) d\theta.$$
+  See 'log derivative trick' [here](http://blog.shakirm.com/2015/11/machine-learning-trick-of-the-day-5-log-derivative-trick/), where:
+  $$\nabla_x y(x) = y(x) \nabla_x \log x,$$
+  according to [Sehnke 2010](http://kyb.mpg.de/fileadmin/user_upload/files/publications/attachments/Neural-Networks-2010-Sehnke_%5b0%5d.pdf).
 
 **Question 2:** The current ES algorithm convolves the objective
   function $F$ with the Gaussian $\mathcal{N}(0,\sigma^2I)$. But
   suppose we want to apply ES to a learning model with some
   hierarchical structure (layers of a neural network, sequential 
   actions, etc.). Then consider convolving with a Gaussian that has 
-  smaller variance for early layers and greater variance for later
-  layers. Thus allowing it to learn layers first. Then, as training
-  goes on, reduce variance of later layers. Is this analogous to the
-  batch normalization procedure this paper used? Does this work
-  according to intuition? How may this framed in terms of
-  entropy/generalization as discussed in [research directions](https://geelon.github.io/projects/files/research_direction.pdf)?
+  smaller variance for parameters in earlier layers and greater
+  variance for later layers. Thus allowing it to learn parameters of
+  the earlier layers first. Then, as trainin  goes on, reduce variance
+  of later layers. Is this analogous to the batch normalization
+  procedure this paper used? Does this work according to intuition?
+  How may this framed in terms of entropy/generalization as discussed
+  in [research directions](https://geelon.github.io/projects/files/research_direction.pdf)? 
 
 
 ### Keywords/Further Reading
