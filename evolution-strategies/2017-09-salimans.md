@@ -25,7 +25,8 @@ This may be done using gradient ascent/descent, the gradient is
 estimated by:
 $$\nabla_\psi \mathbb{E}_{\theta \sim p_\psi} F(\theta) =
 \mathbb{E}_{\theta \sim p_\psi} \big\{F(\theta) \nabla_\psi \log
-p_\psi(\theta)\big\}.$$
+p_\psi(\theta)\big\},$$
+where note that the estimator never computes the gradient of $F(\theta)$.
 And when $p_\psi$ is factored Gaussian (?? what is meant by factored
 ??), the estimator is also known as
 [simultaneous perturbation stochastic approximation (Spall 1992)](http://www.jhuapl.edu/spsa/pdf-spsa/spall_tac92.pdf),
@@ -111,6 +112,12 @@ the case ??)
   How may this framed in terms of entropy/generalization as discussed
   in [research directions](https://geelon.github.io/projects/files/research_direction.pdf)? 
 
+**Aside 3:** Parameters in different levels/layers as a way to
+  generate/estimate fractals. Each layer corresponds to a different
+  scale of detail, so deserves different scale of $\sigma$. But in
+  learning models where no clear hierarchy, can we determine/learn a
+  hierarchy? Which parameters are more/less sensitive? c.f. [influence](https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Kabra_Understanding_Classifier_Errors_2015_CVPR_paper.pdf)
+  [functions](http://proceedings.mlr.press/v70/koh17a.html)
 
 ### Keywords/Further Reading
 
@@ -118,3 +125,4 @@ the case ??)
 - Q-learning
 - batch normalization
 - importance sampling, [Monte Carlo methods](http://ib.berkeley.edu/labs/slatkin/eriq/classes/guest_lect/mc_lecture_notes.pdf)
+- influence functions
