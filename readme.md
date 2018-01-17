@@ -4,7 +4,7 @@ title: ML Articles Reading Notes
 
 # ML Articles Reading Notes
 
-Notes in chronological order: [archive](https://geelon.github.io/projects/notes/archive.html)
+Notes in chronological order: [archive](https://geelon.github.io/thesis-notes.html)
 
 ## Evolution Strategies
 
