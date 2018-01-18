@@ -14,3 +14,4 @@ Notes in chronological order: [archive](https://geelon.github.io/thesis-notes.ht
 
 ## Generalization Theory
 - [Tishby 2000](https://arxiv.org/pdf/physics/0004057.pdf): The Information Bottleneck Method, [notes](./generalization-theory/2000-04-tishby.md)
+- [Tishby 2015](https://arxiv.org/pdf/1503.02406.pdf): Deep Learning and the Information Bottleneck Principle, [notes](./generalization-theory/2015-03-tishby.md)
