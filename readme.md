@@ -6,6 +6,11 @@ title: ML Articles Reading Notes
 
 Notes in chronological order: [archive](https://geelon.github.io/thesis-notes.html)
 
+## Fundamentals
+
+- [Shalev-Shwartz 2014](http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf), Understanding Machine Learning: from Theory to Algorithms
+    - Chapter 4: Learning via Uniform Convergence, [notes](./fundamentals/2014-UML-chapter-4.html)
+
 ## Evolution Strategies (Derivative-Free Optimization)
 
 - [Salimans 2017](https://arxiv.org/pdf/1703.03864.pdf): Evolution Strategies as a Scalable Alternative to Reinforcement Learning, [notes](./evolution-strategies/2017-09-salimans.md)
