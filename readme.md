@@ -10,7 +10,8 @@ Notes in chronological order: [archive](https://geelon.github.io/thesis-notes.ht
 
 - [Shalev-Shwartz 2014](http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf), Understanding Machine Learning: from Theory to Algorithms
     - Chapter 4: Learning via Uniform Convergence, [notes](./fundamentals/2014-UML-chapter-4.html)
-
+    - Chapter 5: No Free Lunch and Error Decomposition, [notes](./fundamentals/2014-UML-chapter-5.html)
+    
 ## Evolution Strategies (Derivative-Free Optimization)
 
 - [Salimans 2017](https://arxiv.org/pdf/1703.03864.pdf): Evolution Strategies as a Scalable Alternative to Reinforcement Learning, [notes](./evolution-strategies/2017-09-salimans.md)
