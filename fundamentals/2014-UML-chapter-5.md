@@ -47,7 +47,7 @@ empirical risk is only an estimator of the true risk).
 
 This error depends on the size of $\mathcal{H}$ and the sample size
 $m$. Recalling the previous
-[notes](./2014-UML-chapter-4.html) (Corrolay 5), the
+[notes](./2014-UML-chapter-4.html) (Corollary 5), the
 relationship is:
 $$\epsilon = O\left(\sqrt{\frac{\log |\mathcal{H}|}{m}}\right).$$
 
