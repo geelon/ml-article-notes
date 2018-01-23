@@ -9,8 +9,9 @@ Notes in chronological order: [archive](https://geelon.github.io/thesis-notes.ht
 ## Fundamentals
 
 - [Shalev-Shwartz 2014](http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf), Understanding Machine Learning: from Theory to Algorithms
-    - Chapter 4: Learning via Uniform Convergence, [notes](./fundamentals/2014-UML-chapter-4.html)
-    - Chapter 5: No Free Lunch and Error Decomposition, [notes](./fundamentals/2014-UML-chapter-5.html)
+    - Chapter 4: Learning via Uniform Convergence, [notes](./fundamentals/2014-UML-chapter-4.md)
+    - Chapter 5: No Free Lunch and Error Decomposition, [notes](./fundamentals/2014-UML-chapter-5.md)
+    - Chapter 6: VC Dimension, [notes](./fundamentals/2014-UML-chapter-6.md)
     
 ## Evolution Strategies (Derivative-Free Optimization)
 

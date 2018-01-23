@@ -5,6 +5,9 @@ date: 2018-01-18
 
 Shai Shalev-Shwartz & Shai Ben-David, [Understanding Machine Learning](http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/)
 
+- [next chapter](./2014-UML-chapter-5.html): No Free Lunch and Error
+  Decomposition 
+
 ## Summary
 
 **Notation:** $\mathcal{H}$ is a *hypothesis class* on the domain $Z$,

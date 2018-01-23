@@ -5,6 +5,10 @@ date: 2018-01-19
 
 Shai Shalev-Shwartz & Shai Ben-David, [Understanding Machine Learning](http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/)
 
+- [previous chapter](./2014-UML-chapter-4.html): Learning via Uniform
+  Convergence 
+- [next chapter](./2014-UML-chapter-6.html): VC Dimension
+
 ## Summary
 
 ### No Free Lunch Theorem
