@@ -7,7 +7,7 @@ Shai Shalev-Shwartz & Shai Ben-David, [Understanding Machine Learning](http://ww
 
 - [previous chapter](./2014-UML-chapter-5.html): No Free Lunch and
   Error Decomposition
-- [next chapter](#): Nonuniform Learnability
+- [next chapter](./2014-UML-chapter-7.html): Nonuniform Learnability
 
 ## Summary
 
