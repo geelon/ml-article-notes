@@ -12,7 +12,7 @@ Notes in chronological order: [archive](https://geelon.github.io/thesis-notes.ht
     - Chapter 4: Learning via Uniform Convergence, [notes](./fundamentals/2014-UML-chapter-4.md)
     - Chapter 5: No Free Lunch and Error Decomposition, [notes](./fundamentals/2014-UML-chapter-5.md)
     - Chapter 6: VC Dimension, [notes](./fundamentals/2014-UML-chapter-6.md)
-    - Chapter 7: Nonuniform Learnability and SRM, [notes](./fundamentals/2014-UML-chapter-5.md)
+    - Chapter 7: Nonuniform Learnability and SRM, [notes](./fundamentals/2014-UML-chapter-7.md)
     
 ## Evolution Strategies (Derivative-Free Optimization)
 
