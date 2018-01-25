@@ -27,7 +27,7 @@ called the *sample complexity*.
 
 We can generalize by removing the realizability assumption, leading to
 *agnostic PAC learning* (i.e. it is not guaranteed that there exists
-some hypothesis in $\mathcal{H$} that can obtain zero risk. In this
+some hypothesis in $\mathcal{H}$ that can obtain zero risk. In this
 setting, we consider a distribution $\mathcal{D}$ over the product
 $\mathcal{X} \times \mathcal{Y}$, where $\mathcal{X}$ is the instance
 space and $\mathcal{Y}$ is the label set. Samples are drawn from this
