@@ -5,6 +5,7 @@ date: 2018-01-18
 
 Shai Shalev-Shwartz & Shai Ben-David, [Understanding Machine Learning](http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/)
 
+- [previous chapter](./2014-UML-chapter-3.html): PAC Learning
 - [next chapter](./2014-UML-chapter-5.html): No Free Lunch and Error
   Decomposition 
 
