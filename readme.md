@@ -16,6 +16,7 @@ Notes in chronological order: [archive](https://geelon.github.io/thesis-notes.ht
     - Chapter 7: Nonuniform Learnability and SRM, [notes](./fundamentals/2014-UML-chapter-7.md)
 - [Cucker Zhou 2007](http://www.cambridge.org/gb/academic/subjects/computer-science/pattern-recognition-and-machine-learning/learning-theory-approximation-theory-viewpoint), Learning Theory: an approximation viewpoint
     - Chapter 1: The Framework of Learning, [notes](./fundamentals/2007-LT-chapter-1.md)
+    - Chapter 2: Basic Hypothesis Spaces, [notes](./fundamentals/2007-LT-chapter-2.md)
     
 ## Evolution Strategies (Derivative-Free Optimization)
 
