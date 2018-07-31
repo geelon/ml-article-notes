@@ -204,7 +204,7 @@ zero as the number samples tend to infinity. The sort of bounds $B(m,
 
 
 [^other]: this classification of error bounds is from (Bosquet
-Boucheron Lugosi 2004), see Further Reading.
+Boucheron Lugosi 2004).
 
 ## Further Reading
 
