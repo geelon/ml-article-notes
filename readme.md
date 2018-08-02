@@ -19,6 +19,9 @@ Notes in chronological order: [archive](https://geelon.github.io/thesis-notes.ht
 - [Cucker Zhou 2007](http://www.cambridge.org/gb/academic/subjects/computer-science/pattern-recognition-and-machine-learning/learning-theory-approximation-theory-viewpoint), Learning Theory: an approximation viewpoint
     - Chapter 1: The Framework of Learning, [notes](./fundamentals/2007-LT-chapter-1.md)
     - Chapter 2: Basic Hypothesis Spaces, [notes](./fundamentals/2007-LT-chapter-2.md)
+
+## Statistics
+- [Minsker 2015](https://arxiv.org/abs/1308.1334): Geometric median and robust estimation in Banach spaces, [notes](./statistics/2015-geometric-median.md)
     
 ## Evolution Strategies (Derivative-Free Optimization)
 

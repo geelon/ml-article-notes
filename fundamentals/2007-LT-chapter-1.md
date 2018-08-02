@@ -69,7 +69,8 @@ $$\begin{equation*}\mathbb{E}_X\bigg[2\big(f(x) - f_\rho(x)\big) \cdot
 \mathbb{E}_Y\left[ f_\rho(x) - y \ \big|\ x\right]\bigg] =
 \mathbb{E}_X \big[2\big(f(x) - f_\rho(x)\big) \cdot 0\big] = 0.
 \end{equation*}$$
-This proves the desired equation. ☐
+This proves the desired equation.
+<div align="right">☐</div>
 
 Not only does this show that $f_\rho$ obtains is the best possible
 classifier, we can rephrase the goal of learning as finding the best
@@ -151,7 +152,8 @@ compact, optimizers exist.
  f_2||_\infty \ d\rho\\
  &\leq 2M ||f_1 - f_2||_\infty.
  \end{align*}$$
- A similar calculation shows the same for the empirical error.  ☐
+ A similar calculation shows the same for the empirical error.
+ <div align="right">☐</div>
 
 Further note that the bound for the empirical error requires  $||
 \cdot ||_\infty$ as a condition. In contrast, a weaker condition that

@@ -1,11 +1,12 @@
 ---
 title: Learning Theory, an approximation viewpoint (Chapter 2)
-date: 2018-07-29
+date: 2018-07-30
 ---
 
 Felipe Cucker & Ding Xuan Zhou, [Learning Theory: an approximation viewpoint](http://www.cambridge.org/gb/academic/subjects/computer-science/pattern-recognition-and-machine-learning/learning-theory-approximation-theory-viewpoint)
 
 - [previous chapter](./2007-LT-chapter-1.html): The Framework of Learning
+- [next chapter](./2007-LT-chapter-3.html): Estimating the Sample Error
 
 ## Summary
 
@@ -134,7 +135,8 @@ We also define for each $x \in X$, the function $K_x: X \to
  convergence in $||\cdot ||_{\mathcal{H}_K}$ implies convergence in
  $||\cdot ||_\infty$. And as $f \in \mathcal{H}_K$ is the limit of
  linear combinations of continuous functions $K_x$, $f$ is
- continuous.  ☐
+ continuous.
+ <div align="right">☐</div>
 
 **Definition 8.** The Hilbert space $\mathcal{H}_K$ in the previous
   theorem is called a *reproducing kernel Hilbert space* (RKHS), where
@@ -189,6 +191,7 @@ $\mathscr{C}(X)$. First, we need that it is closed:
  for all $g \in \mathcal{H}_K$. In particular, letting $g = K_x$ for
  all $x \in X$ shows that $\tilde{f}(x) = f(x)$ for all $x$; thus,
  $f$ is in $B_R$.
+ <div align="right">☐</div>
 
 Now, we show that $\mathcal{H}_K$ is equicontinuous.
 
@@ -208,12 +211,14 @@ Now, we show that $\mathcal{H}_K$ is equicontinuous.
    |f(y) - f(y')| \leq |\langle f, K_y - K_{y'}\rangle_K| \leq ||f||_K
  ||K_y - K_{y'}||_K \leq R \sqrt{ 2 \epsilon}.
  \end{align*}$$
+ <div align="right">☐</div>
 
 Arzelá-Ascoli now implies:
 
 **Proposition 16.** Let $K$ be a Mercer kernel on a compact metric
 space $X$, and $\mathcal{H}_K$ be its RKHS. Then closed balls $B_R$ 
 in $\mathcal{H}_K$ are compact in $\mathscr{C}(X)$.
+<div align="right">☐</div>
 
 And so, these are compact metric hypothesis spaces.
 
@@ -339,7 +344,8 @@ perpendicular. And since:
 $$f(x_i) = \langle f, K_{x_i}\rangle,$$
 the orthogonal component has no contribution, implying
 $$\Pi f(x_i) = f(x_i).$$
-It follows $\Pi f$ also minimizes the empirical error.  ☐
+It follows $\Pi f$ also minimizes the empirical error.
+<div align="right">☐</div>
 
 So, when $B = B_R$, a solution will be of the form $f_\mathbf{z} =
 \sum_{i=1}^m c_i^* K_{x_i}$, minimizing:
