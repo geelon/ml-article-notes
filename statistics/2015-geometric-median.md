@@ -232,6 +232,29 @@ see paper for details.
 
 [^hs]: Note that the Hilbert-Schmidt norm on Euclidean space is also
 called the Frobenius norm.
+
+## Discussion
+
+**Question 1.** If $\hat{\mu}_1,\dotsc, \hat{\mu}_k$ are a collection
+  of i.i.d. estimators with $\mu = \mathbb{E}\hat{\mu}_i$, is
+  $\mathrm{med}(\hat{\mu}_1,\dotsc, \hat{\mu}_k)$ an unbiased
+  estimator of $\mu$? It seems like it should not be, for otherwise
+  the geometric median and mean should coincide.
+
+**Question 2.** What if instead of minimizing the '$\ell^1$-median':
+$$\begin{equation*}
+\mathrm{arg\ min}_{y \in \mathbb{X}} \sum_{j =1}^k ||y - x_j||,
+\end{equation*}$$
+we minimized an '$\ell^p$-median':
+$$\begin{equation*}
+\mathrm{arg\ min}_{y \in \mathbb{X}} \sum_{j =1}^k ||y - x_j||^p.
+\end{equation*}$$
+As $p$ takes on values between $1$ and $\infty$, what 'median' do we
+obtain? For $p \in (1,2)$, are there different tradeoffs? Perhaps
+$C_\alpha$ relaxes (so that it is easier to produce the individual
+estimators), while the concentration bounds are also looser (though
+perhaps still tighter than using all of our sample size 'budget' in
+one go). This question seems related to $M$-estimation.
   
 ### Further Reading and Keywords
 
