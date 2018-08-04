@@ -9,7 +9,6 @@ Notes in chronological order: [archive](https://geelon.github.io/thesis-notes.ht
 
 
 ## Fundamentals
-
 - [Shalev-Shwartz 2014](http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf), Understanding Machine Learning: from Theory to Algorithms
     - Chapter 3: PAC learning, [notes](./fundamentals/2014-UML-chapter-3.md)
     - Chapter 4: Learning via Uniform Convergence, [notes](./fundamentals/2014-UML-chapter-4.md)
@@ -23,15 +22,17 @@ Notes in chronological order: [archive](https://geelon.github.io/thesis-notes.ht
 ## Statistics
 - [Minsker 2015](https://arxiv.org/abs/1308.1334): Geometric median and robust estimation in Banach spaces, [notes](./statistics/2015-geometric-median.md)
     
-## Evolution Strategies (Derivative-Free Optimization)
 
+## Generalization Theory
+- [Belkin 2018](./): To Understand Deep Learning We Need to Understand Kernel Learning, [notes](./generalization-theory/2018-06-belkin.md)
+- [Tishby 2000](https://arxiv.org/pdf/physics/0004057.pdf): The Information Bottleneck Method, [notes](./generalization-theory/2000-04-tishby.md)
+- [Tishby 2015](https://arxiv.org/pdf/1503.02406.pdf): Deep Learning and the Information Bottleneck Principle, [notes](./generalization-theory/2015-03-tishby.md)
+
+
+## Derivative-Free Optimization
 - [Salimans 2017](https://arxiv.org/pdf/1703.03864.pdf): Evolution Strategies as a Scalable Alternative to Reinforcement Learning, [notes](./evolution-strategies/2017-09-salimans.md)
 - [Lehman 2017](https://arxiv.org/pdf/1712.06568.pdf): ES Is More Than Just a Traditional Finite-Difference Approximator, [notes](./evolution-strategies/2017-12-lehman.md)
 - [Zhang 2017](https://arxiv.org/pdf/1712.06564.pdf): On the Relationship Between the OpenAI Evolution Strategy and Stochastic Gradient Descent, [notes](./evolution-strategies/2017-12-zhang.md)
-
-## Generalization Theory
-- [Tishby 2000](https://arxiv.org/pdf/physics/0004057.pdf): The Information Bottleneck Method, [notes](./generalization-theory/2000-04-tishby.md)
-- [Tishby 2015](https://arxiv.org/pdf/1503.02406.pdf): Deep Learning and the Information Bottleneck Principle, [notes](./generalization-theory/2015-03-tishby.md)
 
 
 <em>*The phrasing in these notes are sometimes copied directly from the texts. Other times, the notes diverge quite a bit.</em>
