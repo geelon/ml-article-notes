@@ -33,10 +33,12 @@ Notes in chronological order: [archive](https://geelon.github.io/thesis-notes.ht
 - [Yu Mineyev Varshney 2018](https://arxiv.org/pdf/1807.11167v1.pdf): A Group-Theoretic Approach to Abstraction, [notes](./unsupervised/2018-07-group-theoretic-approach-to-abstraction.md)
 
 
-## Derivative-Free Optimization
-- [Salimans 2017](https://arxiv.org/pdf/1703.03864.pdf): Evolution Strategies as a Scalable Alternative to Reinforcement Learning, [notes](./evolution-strategies/2017-09-salimans.md)
-- [Lehman 2017](https://arxiv.org/pdf/1712.06568.pdf): ES Is More Than Just a Traditional Finite-Difference Approximator, [notes](./evolution-strategies/2017-12-lehman.md)
-- [Zhang 2017](https://arxiv.org/pdf/1712.06564.pdf): On the Relationship Between the OpenAI Evolution Strategy and Stochastic Gradient Descent, [notes](./evolution-strategies/2017-12-zhang.md)
+## Optimization
+- [Jain Kar 2017](https://arxiv.org/pdf/1712.07897.pdf), Non-convex Optimization for Machine Learning
+     - Chapter 1: Introduction, [notes](./optimization/2017-nonconvex-chapter-1.md)
+- [Salimans 2017](https://arxiv.org/pdf/1703.03864.pdf): Evolution Strategies as a Scalable Alternative to Reinforcement Learning, [notes](./optimization/2017-09-salimans.md)
+- [Lehman 2017](https://arxiv.org/pdf/1712.06568.pdf): ES Is More Than Just a Traditional Finite-Difference Approximator, [notes](./optimization/2017-12-lehman.md)
+- [Zhang 2017](https://arxiv.org/pdf/1712.06564.pdf): On the Relationship Between the OpenAI Evolution Strategy and Stochastic Gradient Descent, [notes](./optimization/2017-12-zhang.md)
 
 
 <em>*The phrasing in these notes are sometimes copied directly from the texts. Other times, the notes diverge quite a bit.</em>
