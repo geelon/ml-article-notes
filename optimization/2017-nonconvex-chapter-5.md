@@ -287,7 +287,7 @@ just have $n |\mathcal{Z}|$.
   M^{\mathrm{sto}}(\theta') = \theta' + \alpha \cdot \nabla
   Q_Y(\theta' | \theta'),
   \end{equation*}$$
-  where $Y \sim \mathrm{Uniform}(\mathbf{y}_1,\dotsc, \mathrm{y}_n)$.
+  where $Y \sim \mathrm{Uniform}(\mathbf{y}_1,\dotsc, \mathbf{y}_n)$.
 
 
 

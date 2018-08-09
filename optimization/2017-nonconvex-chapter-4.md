@@ -5,7 +5,7 @@ date: 2018-08-07
 
 Prateek Jain & Purushottam Kar, [Non-convex Optimization for Machine Learning](https://arxiv.org/pdf/1712.07897.pdf)
 
-- [previous chapter](./2017-nonconvex-chapter-2.html): ???
+- [previous chapter](./2017-nonconvex-chapter-2.html): Nonconvex Projected Gradient Descent
 - current chapter: Alternating Minimization
 - [next chapter](./2017-nonconvex-chapter-5.html): The EM Algorithm
 

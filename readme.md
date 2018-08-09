@@ -38,6 +38,7 @@ Notes in chronological order: [archive](https://geelon.github.io/thesis-notes.ht
      - Chapter 1: Introduction, [notes](./optimization/2017-nonconvex-chapter-1.md)
      - Chapter 2: Mathematical Tools, [notes](./optimization/2017-nonconvex-chapter-2.md)
      - Chapter 4: Alternating Minimization, [notes](./optimization/2017-nonconvex-chapter-4.md)
+     - Chapter 5: EM Algorithm, [notes](./optimization/2017-nonconvex-chapter-5.md)
 - [Salimans 2017](https://arxiv.org/pdf/1703.03864.pdf): Evolution Strategies as a Scalable Alternative to Reinforcement Learning, [notes](./optimization/2017-09-salimans.md)
 - [Lehman 2017](https://arxiv.org/pdf/1712.06568.pdf): ES Is More Than Just a Traditional Finite-Difference Approximator, [notes](./optimization/2017-12-lehman.md)
 - [Zhang 2017](https://arxiv.org/pdf/1712.06564.pdf): On the Relationship Between the OpenAI Evolution Strategy and Stochastic Gradient Descent, [notes](./optimization/2017-12-zhang.md)
