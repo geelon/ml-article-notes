@@ -92,9 +92,11 @@ $O(VK^F)$ parameters, compared to the original $O(K^V)$.
 <div class="center puzzle-figure">
 <img src="../files/murphy-nbc.png" alt="naive bayes classifier GM"" />
 
-**Figure 1.** A graphical model corresponding to a NBC model. Source:
-<a href="https://mitpress.mit.edu/books/machine-learning-1">Murphy
-2012</a></div></br>  
+**Figure 1.** A graphical model corresponding to a NBC model. 
+<div align="right">Source: <a
+href="https://mitpress.mit.edu/books/machine-learning-1">Murphy
+2012</a></div>
+</div></br>  
 
 A graphical model can capture correlation between features. For
 example, if the model is a tree, then we can use a *tree-augmented
@@ -106,9 +108,11 @@ example is:
 
 **Figure 2.** A graphical model corresponding to a TAN model for $D=
 4$ features. In general, the tree topology may change depending on the
-value of $y$. Source: <a
+value of $y$.
+<div align="right">Source: <a
 href="https://mitpress.mit.edu/books/machine-learning-1">Murphy
-2012</a></div></br> 
+2012</a></div>
+</div></br> 
 
 There are two reasons for using a tree instead of a generic graph:
 
@@ -202,8 +206,12 @@ the plate will be repeated when the model is *unrolled*. For example:
 
 **Figure 3.**  Left: the data $X_i$ are conditionally i.i.d. given
 $\theta$. Right: the same model, in plate notation. 
-Source: <a href="https://mitpress.mit.edu/books/machine-learning-1">
-Murphy 2012</a></div></br>
+<div align="right">Source: <a
+href="https://mitpress.mit.edu/books/machine-learning-1">Murphy
+2012</a></div>
+</div></br> 
+
+
 
 More complicated examples can be constructed. For example, the
 following is the DGM of a naive Bayes classifiers with parameter
@@ -217,9 +225,12 @@ $X_1,\dotsc, X_D$ are generated given a $Y$. Here, there are
 parameters $\theta_{c}$ for every class $c$ for $Y$. It is implied
 that $\theta_{jc}$ is used to generate $x_{ij}$ iff $y_i
 =c$. Otherwise, it is ignored.  
-Source: <a href="https://mitpress.mit.edu/books/machine-learning-1">
-Murphy 2012</a></div></br>
+<div align="right">Source: <a
+href="https://mitpress.mit.edu/books/machine-learning-1">Murphy
+2012</a></div>
+</div></br>
 
+ 
 This is an example of *context specific independence*, since $x_{ij}
 \perp \theta_{jc}$ holds iff $y_i \ne c$.
 
@@ -285,8 +296,10 @@ explained away by evidence as a ball moving around the nodes; we call
 this the *Bayes ball*. Arrows with a line across the head indicate
 when the ball is blocked. Otherwise, the ball may freely traverse the
 edges. 
-Source: <a href="https://mitpress.mit.edu/books/machine-learning-1">
-Murphy 2012</a></div></br>
+<div align="right">Source: <a
+href="https://mitpress.mit.edu/books/machine-learning-1">Murphy
+2012</a></div>
+</div></br>
 
 The three rules of the Bayes ball follows.
 
@@ -381,9 +394,10 @@ p(x_7| x_4,x_5,x_6).
 <img src="../files/murphy-dgm.png" alt="dgm"" />
 
 **Figure 6.** An example of a directed graphical model.
-Source: <a
+<div align="right">Source: <a
 href="https://mitpress.mit.edu/books/machine-learning-1">Murphy
-2012</a></div></br> 
+2012</a></div>
+</div></br>
 
 
 ### Exercises
@@ -394,14 +408,33 @@ href="https://mitpress.mit.edu/books/machine-learning-1">Murphy
 <div class="center puzzle-figure">
 <img src="../files/murphy-dgm-problem.png" alt="dgm problem"" />
 
-Source: <a
+<div align="right">Source: <a
 href="https://mitpress.mit.edu/books/machine-learning-1">Murphy
-2012</a></div></br> 
+2012</a></div>
+</div></br>
 
 Assume it is a minimal I-map for $p(A,B,C,D,E,F,X)$. Now consider
 marginalizing out $X$. Construct a new DAG $G'$ which is a minimal
 I-map for $p(A,B,C,D,E,F)$. Specify and justify which extra edges need
 to be added.
+
+*To marginalize out $X$, we need to connect every single parent of $X$
+ to every one of its children, and form an acyclic tournament
+ on its children:*
+<div class="center puzzle-figure">
+<img src="../files/problem-murphy-marginalize.png" alt="I map"" />
+</div>
+*As a simple example of $p(A,B,C,D,E,F,X)$ such that the new
+ collection of arrows is minimal, let the random variable $X =
+ (A,B,Z)$, where $Z$ is some extra randomness independent of
+ $A,B,C,D$. Furthermore, let $E = (C,X,Z)$, and $F= (D,X,Z)$. Then,
+ when  we marginalize away $X$, we see that each of the new arrows
+ above are necessary.*
+
+ *On the other hand, before we marginalized away $X$, for any of the
+  remaining pairs of nodes $(R,S)$ with no edge between them, we knew
+  that $p(R,S) = p(R)p(S)$. Thus, even after marginalizing out $X$,
+  this remains true.* 
 
 
 **Problem 2.** *[Exercise 10.3]* Markov blanket for a DGM. Prove that
@@ -422,22 +455,41 @@ p(x_t| \mathbf{x}_{\hat{t}}) &\propto
 
 ## Discussion
 
-**Question 1.** I don't understand the distinction between a conditional
+**Note 1.** In the *Conditional Independence Properties of DGMs*
+  section, we said that the complete graph is an I-map for any
+  probability distribution. To be rigorous, we need to make sure that
+  there exists a complete DAG on a collection of $n$ nodes, for all $n
+  \in \mathbb{N}$ (i.e. there exists acyclic tournaments). Indeed,
+  this is easily shown by just giving a total order on the vertices. 
+
+**Note 2.** It seems that given a graph $G$ and any probability
+  distribution $p$ over its node, for any node $X$ in $G$, the
+  construction described in Problem 1 will always produce a new graph
+  $G'$ that is Markov over the distribution $p_{\hat{X}}$ where $X$ is
+  marginalized away. We only need to worry about the Markov blanket of
+  $X$. Marginalizing away $X$ won't change conditional independence
+  relations between parents of $X$. All other edges between parents of
+  $X$ and children of $X$, and edges within children have been added.
+
+  Furthermore, there are probability distributions where each of the
+  new edges are necessary. Any example?
+
+**Question 3.** I don't understand the distinction between a conditional
 probability table and a conditional probability distribution. Why does
 the latter only use $O(K^2V^2)$ parameters?
 
-**Question 2.** This section defines a *directed acyclic graph* as "a
+**Question 4.** This section defines a *directed acyclic graph* as "a
 directed graph with no directed cycles" and a *directed tree* as "a
 DAG in which there are no directed cycles". There seems to be no
 distinction?
 
-**Question 3.** What does it mean that "there is nothing inherently
+**Question 5.** What does it mean that "there is nothing inherently
   'Bayesian' about Bayesian networks" or "nothing inherently causal"?
 
-**Note 4.** Follow up on chapters 20, 26 on TAN models and the use of
+**Note 6.** Follow up on chapters 20, 26 on TAN models and the use of
   trees.
 
-**Note 5.** Review the Cholesky decomposition.
+**Note 7.** Review the Cholesky decomposition.
 
 ### Further Reading
 
