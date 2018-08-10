@@ -75,9 +75,12 @@ its parents, so DGMs satisfy the *ordered Markov property*:
 $$x_s \perp \mathbf{x}_{\mathrm{predecessors}(s) \setminus
 \mathrm{parents}(s)} | \mathbf{x}_{\mathrm{parents}(s)},$$
 where $x_s$ is conditionally independent with its nonimmediate
-predecessors. And so, in general,
-$$p(\mathbf{x}_{1:V} | G) = \prod_{t=1}^V p(x_t |
-\mathbf{x}_{\mathrm{parents}(t)}).$$
+predecessors. And so, in general, we have a *factorization* property
+for DAGs:
+$$\begin{equation} \label{F}
+p(\mathbf{x}_{1:V} | G) = \prod_{t=1}^V p(x_t |
+\mathbf{x}_{\mathrm{parents}(t)}).
+\end{equation}$$
 If the family of each node is size $O(F)$, then there are at most
 $O(VK^F)$ parameters, compared to the original $O(K^V)$.
 
@@ -89,9 +92,9 @@ $O(VK^F)$ parameters, compared to the original $O(K^V)$.
 <div class="center puzzle-figure">
 <img src="../files/murphy-nbc.png" alt="naive bayes classifier GM"" />
 
-A graphical model corresponding to a NBC model. Source: <a
-href="https://mitpress.mit.edu/books/machine-learning-1">Murphy
-2012</a></div></br> 
+**Figure 1.** A graphical model corresponding to a NBC model. Source:
+<a href="https://mitpress.mit.edu/books/machine-learning-1">Murphy
+2012</a></div></br>  
 
 A graphical model can capture correlation between features. For
 example, if the model is a tree, then we can use a *tree-augmented
@@ -101,10 +104,11 @@ example is:
 <div class="center puzzle-figure">
 <img src="../files/murphy-tan.png" alt="a tree-augmented naive bayes GM"" />
 
-A graphical model corresponding to a TAN model for $D= 4$ features. In
-general, the tree topology may change depending on the value of
-$y$. Source: <a href="https://mitpress.mit.edu/books/machine-learning-1">Murphy
-2012</a></div></br>
+**Figure 2.** A graphical model corresponding to a TAN model for $D=
+4$ features. In general, the tree topology may change depending on the
+value of $y$. Source: <a
+href="https://mitpress.mit.edu/books/machine-learning-1">Murphy
+2012</a></div></br> 
 
 There are two reasons for using a tree instead of a generic graph:
 
@@ -196,8 +200,8 @@ the plate will be repeated when the model is *unrolled*. For example:
 <div class="center puzzle-figure">
 <img src="../files/murphy-plate.png" alt="example plate notation"" />
 
-Left: the data $X_i$ are conditionally i.i.d. given $\theta$. Right:
-the same model, in plate notation. 
+**Figure 3.**  Left: the data $X_i$ are conditionally i.i.d. given
+$\theta$. Right: the same model, in plate notation. 
 Source: <a href="https://mitpress.mit.edu/books/machine-learning-1">
 Murphy 2012</a></div></br>
 
@@ -208,10 +212,11 @@ $\theta$.
 <div class="center puzzle-figure">
 <img src="../files/murphy-nested-plates.png" alt="nested plate notation"" />
 
-Left: $D$ conditionally independent variables $X_1,\dotsc, X_D$ are
-generated given a $Y$. Here, there are parameters $\theta_{c}$ for
-every class $c$ for $Y$. It is implied that $\theta_{jc}$ is used to
-generate $x_{ij}$ iff $y_i =c$. Otherwise, it is ignored. 
+**Figure 4.** Left: $D$ conditionally independent variables
+$X_1,\dotsc, X_D$ are generated given a $Y$. Here, there are
+parameters $\theta_{c}$ for every class $c$ for $Y$. It is implied
+that $\theta_{jc}$ is used to generate $x_{ij}$ iff $y_i
+=c$. Otherwise, it is ignored.  
 Source: <a href="https://mitpress.mit.edu/books/machine-learning-1">
 Murphy 2012</a></div></br>
 
@@ -265,17 +270,21 @@ nodes of a graph are conditionally independent.
   d-separated by $E$.
 
 **Proposition 7.** Let $G$ be a DAG. Then:
-$$\mathbf{x}_A \perp_G \mathbf{x}_B |\mathbf{x}_E \Longleftrightarrow
-\textrm{$A$ is d-separated from $B$ given $E$}.$$
+$$\begin{equation}\label{G}
+\mathbf{x}_A \perp_G \mathbf{x}_B |\mathbf{x}_E \Longleftrightarrow 
+\textrm{$A$ is d-separated from $B$ given $E$}.
+\end{equation}$$
 
+This is the *directed global Markov property*.
 
 <div class="center puzzle-figure">
 <img src="../files/murphy-bayes-ball-rules.png" alt="bayes ball rules"" />
 
-Visualize our knowledge of a variable that is not explained away by
-evidence as a ball moving around the nodes; we call this the *Bayes
-ball*. Arrows with a line across the head indicate when the ball is
-blocked. Otherwise, the ball may freely traverse the edges.
+**Figure 5.** Visualize our knowledge of a variable that is not
+explained away by evidence as a ball moving around the nodes; we call
+this the *Bayes ball*. Arrows with a line across the head indicate
+when the ball is blocked. Otherwise, the ball may freely traverse the
+edges. 
 Source: <a href="https://mitpress.mit.edu/books/machine-learning-1">
 Murphy 2012</a></div></br>
 
@@ -305,10 +314,111 @@ p(x,z|y) = \frac{p(x) p(z) p(y|x,z)}{p(y)},
 \end{align*}$$
 so $x \not\perp z|y$, even though $x$ and $z$ are marginally
 independent, $p(x,z) = p(x)p(z)$. This effect is called *explaining
-away*, *inter-causal reasoning* or *Berkson's paradox*. 
+away*, *inter-causal reasoning* or *Berkson's paradox*. For example,
+if we observe the sum of two independent coin flips, then conditioned
+on this knowledge, the two flips are no longer independent. 
 
-For example, if we observe the sum of two independent coin flips, then
-conditioned on this knowledge, the two flips are no longer independent.
+Furthermore, if instead of observing $Y$, we observe a descendent,
+then we could learn something about $Y$. Then, $X$ and $Z$ must
+compete to explain this. For example, though we not observe $Y$, if we
+observe a descendant $Y'$ that always take on the same value as $Y$,
+we effectively observe $Y$.
+
+**Corollary 8.** Let $t$ be a node, and let $\mathrm{nd}(t)$ be its
+  *non-descendants*. Let $\mathrm{pa}(t)$ be its parents. Then,
+  $$\begin{equation}
+  \label{L}
+    t \perp \mathrm{nd}(t) \setminus \mathrm{pa}(t) | \mathrm{pa}(t). 
+  \end{equation}$$
+This is called the *directed local Markov property*.
+
+**Corollary 9.** Let $t$ as before. Let $\mathrm{pred}(t)$ be its
+predecessors. Then,
+$$\begin{equation}\label{O}
+  t \perp \mathrm{pred}(t) \setminus \mathrm{pa}(t) | \mathrm{pa}(t). 
+\end{equation}$$
+This follows because $\mathrm{pred}(t) \subset \mathrm{nd}(t)$. This
+property is called the *ordered Markov property*. 
+
+Thus, we have three Markov properties for DAGs: the directed global
+Markov property G, the directed local Markov property L, and the
+ordered Markov property O, Equations $\ref{G}$, $\ref{L}$, and
+$\ref{O}$, respectively. 
+
+We see that $G \implies L \implies O$. In fact, $O \implies L \implies
+G$, as in (Koller and Friedman 2009). Additionally, we saw that DAGs
+satisfy the factorization property F in Equation $\ref{F}$. It's clear
+that $O \implies F$, and in fact, the converse $F \implies O$ is also
+true (Koller and Friedman 2009). 
+
+**Definition 10.** The *Markov blanket* of a node $t$ is the set of
+  nodes that renders a node $t$ conditionally independent of all other
+  nodes in the graph. 
+
+In particular, the Markov blanket $\mathrm{mb}(t)$ is equal to the
+nodes parents, children, and *coparents* (any node that are also
+parents of its children). Thus, $t$'s *full conditional*
+(i.e. conditioning everything except $t$) depends only on its Markov
+blanket. That is, if we let $\mathbf{x}_{\hat{t}}$ denote all
+variables except for $x_t$, the full conditional is:
+$$\begin{align*}
+p(x_t| \mathbf{x}_{\hat{t}}) &= \frac{p(x_t,
+\mathbf{x}_{\hat{t}})}{p(\mathbf{x}_{\hat{t}})}\\
+&\propto p\left(x_t|\mathbf{x}_{\mathrm{pa}(t)}\right) \prod_{s \in
+\mathrm{ch}(t)}
+p\left(x_s| \mathbf{x}_{\mathrm{pa}(s)}\right),
+\end{align*}$$
+since any term not involved with $x_t$ will cancel out; the only terms
+left are those that contain $x_t$ in the *scope*.
+
+For example, in the DGM below, we have:
+$$\begin{equation*}
+p(x_5 | \mathbf{x}_{\hat{5}}) \propto p(x_5|x_2,x_3) p(x_6 | x_3,x_5)
+p(x_7| x_4,x_5,x_6).
+\end{equation*}$$
+
+<div class="center puzzle-figure">
+<img src="../files/murphy-dgm.png" alt="dgm"" />
+
+**Figure 6.** An example of a directed graphical model.
+Source: <a
+href="https://mitpress.mit.edu/books/machine-learning-1">Murphy
+2012</a></div></br> 
+
+
+### Exercises
+
+**Problem 1.** *[Exercise 10.1]* Marginalizing a node in a
+  DGM. Consider the following DAG $G$:
+
+<div class="center puzzle-figure">
+<img src="../files/murphy-dgm-problem.png" alt="dgm problem"" />
+
+Source: <a
+href="https://mitpress.mit.edu/books/machine-learning-1">Murphy
+2012</a></div></br> 
+
+Assume it is a minimal I-map for $p(A,B,C,D,E,F,X)$. Now consider
+marginalizing out $X$. Construct a new DAG $G'$ which is a minimal
+I-map for $p(A,B,C,D,E,F)$. Specify and justify which extra edges need
+to be added.
+
+
+**Problem 2.** *[Exercise 10.3]* Markov blanket for a DGM. Prove that
+  the full conditional for a node $i$ in a DGM is given by:
+$$\begin{align*}
+p(x_t| \mathbf{x}_{\hat{t}}) &\propto
+  p\left(x_t|\mathbf{x}_{\mathrm{pa}(t)}\right) \prod_{s \in
+  \mathrm{ch}(t)} p\left(x_s| \mathbf{x}_{\mathrm{pa}(s)}\right).
+\end{align*}$$
+
+**Problem 3.** *[Exercise 10.9]* Moralization does not introduce new
+  independence statements. Recall that the process of moralizing a DAG
+  means connecting together all "unmarried" parents that share a
+  common child, and then dropping all the arrows. Let $M$ be the
+  moralization of a DAG $G$. Show that $\mathrm{CI}(M) \subset
+  \mathrm{CI}(G)$, where CI are the set of conditional independence
+  statements implied by the model. 
 
 ## Discussion
 
@@ -333,4 +443,4 @@ distinction?
 
 - Chapter 20, for how to use only $O(VK^{w+1})$ time instead of
   $O(K^V)$. 
-
+- [[Koller and Friedman 2009](https://pdfs.semanticscholar.org/04f3/9720b9b20f8ab990228ae3fe4f473e750fe3.pdf)] *Probabilistic Graphical Models: principles and techniques*.
