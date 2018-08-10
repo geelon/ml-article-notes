@@ -460,7 +460,15 @@ p(x_t| \mathbf{x}_{\hat{t}}) &\propto
   probability distribution. To be rigorous, we need to make sure that
   there exists a complete DAG on a collection of $n$ nodes, for all $n
   \in \mathbb{N}$ (i.e. there exists acyclic tournaments). Indeed,
-  this is easily shown by just giving a total order on the vertices. 
+  this is easily shown by just giving a total order on the vertices.
+
+  Furthermore, there exist probability distributions over $G$ such
+  that the complete DAG is I-map minimal. In particular, let
+  $X_1,\dotsc, X_n$ be $n$ nodes on a complete graph. Independently
+  assign each edge the result of a coin toss. Let $X_i$ be the results
+  of all coin tosses for edges adjacent to $i$. From this
+  construction, no two distinct $X_i, X_j$'s are conditionally
+  independent, even after conditioning on everything else.
 
 **Note 2.** It seems that given a graph $G$ and any probability
   distribution $p$ over its node, for any node $X$ in $G$, the
@@ -472,11 +480,18 @@ p(x_t| \mathbf{x}_{\hat{t}}) &\propto
   $X$ and children of $X$, and edges within children have been added.
 
   Furthermore, there are probability distributions where each of the
-  new edges are necessary. Any example?
+  new edges are necessary. In particular, consider the graph that is a
+  directed rooted tree of depth 1, where the root $X$ has $n$
+  children $X_1,\dotsc, X_n$. Let $X_1,\dotsc, X_n$ correspond to the
+  random variables from the previous note, and let $X = (X_1,\dotsc,
+  X_n)$. The $X_i$'s are all conditionally independent given $X$,
+  though once we marginalize out $X$, we are left with the previous
+  situation, where we saw we needed an acyclic tournament.
 
-**Question 3.** I don't understand the distinction between a conditional
-probability table and a conditional probability distribution. Why does
-the latter only use $O(K^2V^2)$ parameters?
+**Question 3.** I don't understand the distinction the book makes
+between a conditional probability table and a conditional probability
+distribution from the very beginning of the chapter. Why does the
+latter only use $O(K^2V^2)$ parameters? 
 
 **Question 4.** This section defines a *directed acyclic graph* as "a
 directed graph with no directed cycles" and a *directed tree* as "a
