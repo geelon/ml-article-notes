@@ -33,6 +33,9 @@ Notes in chronological order: [archive](https://geelon.github.io/thesis-notes.ht
 - [Tishby 2015](https://arxiv.org/pdf/1503.02406.pdf): Deep Learning and the Information Bottleneck Principle, [notes](./generalization-theory/2015-03-tishby.md)
 
 
+## Transfer Learning
+- [Pan Yang 2010](https://www.cse.ust.hk/~qyang/Docs/2009/tkde_transfer_learning.pdf): A Survey on Transfer Learning, [notes](./transfer/2010-07-pan-yang.md)
+
 ## Unsupervised Learning
 - [Yu Mineyev Varshney 2018](https://arxiv.org/pdf/1807.11167v1.pdf): A Group-Theoretic Approach to Abstraction, [notes](./unsupervised/2018-07-group-theoretic-approach-to-abstraction.md)
 
