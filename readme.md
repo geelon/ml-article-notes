@@ -21,7 +21,7 @@ Notes in chronological order: [archive](https://geelon.github.io/thesis-notes.ht
 - [Murphy 2012](./), Machine Learning: a probabilistic approach
     - Chapter 3: Generative Models for Discrete Data, [notes](./fundamentals/2012-MLPA-chapter-3.md)
     - Chapter 10: Directed Graphical Models, [notes](./fundamentals/2012-MLPA-chapter-10.md)
-
+- [Ng Jordan](http://papers.nips.cc/paper/2020-on-discriminative-vs-generative-classifiers-a-comparison-of-logistic-regression-and-naive-bayes.pdf), On Discriminative vs. Generative classifiers: a comparison of logistic regression and naive Bayes, [notes](./fundamentals/ng-jordan.md)
 
 ## Statistics
 - [Minsker 2015](https://arxiv.org/abs/1308.1334): Geometric median and robust estimation in Banach spaces, [notes](./statistics/2015-geometric-median.md)
@@ -35,6 +35,7 @@ Notes in chronological order: [archive](https://geelon.github.io/thesis-notes.ht
 
 ## Transfer Learning
 - [Pan Yang 2010](https://www.cse.ust.hk/~qyang/Docs/2009/tkde_transfer_learning.pdf): A Survey on Transfer Learning, [notes](./transfer/2010-07-pan-yang.md)
+- [Daume Marcu 2006](https://arxiv.org/abs/1109.6341): Domain Adaptation for Statistical Classifiers, [notes](./transfer/2006-daume-marcu.md)
 
 ## Unsupervised Learning
 - [Yu Mineyev Varshney 2018](https://arxiv.org/pdf/1807.11167v1.pdf): A Group-Theoretic Approach to Abstraction, [notes](./unsupervised/2018-07-group-theoretic-approach-to-abstraction.md)
