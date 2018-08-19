@@ -138,6 +138,9 @@ complete training algorithm.
   distribution. What non-distributional approaches to domain
   adaptation/transfer learning are there? Learning analogies?
 
+**Question 2.** When one creates a model, how do you determine whether
+  it is identifiable? How do they know MEGA is identifiable? 
+
 ### Further Reading
 
 - [[Jebara Pentland 1998](http://papers.nips.cc/paper/1537-maximum-conditional-likelihood-via-bound-maximization-and-the-cem-algorithm.pdf)] Maximum Conditional Likelihood via Bound Maximization and the CEM Algorithm 
