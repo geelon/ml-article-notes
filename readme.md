@@ -36,6 +36,7 @@ Notes in chronological order: [archive](https://geelon.github.io/thesis-notes.ht
 ## Transfer Learning
 - [Pan Yang 2010](https://www.cse.ust.hk/~qyang/Docs/2009/tkde_transfer_learning.pdf): A Survey on Transfer Learning, [notes](./transfer/2010-07-pan-yang.md)
 - [Daume Marcu 2006](https://arxiv.org/abs/1109.6341): Domain Adaptation for Statistical Classifiers, [notes](./transfer/2006-daume-marcu.md)
+- [Zadrozny 2004](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.92.170&rep=rep1&type=pdf): Learning and Evaluating Classifiers under Sample Selection Bias, [notes](./transfer/2004-zadrozny.md)
 
 ## Unsupervised Learning
 - [Yu Mineyev Varshney 2018](https://arxiv.org/pdf/1807.11167v1.pdf): A Group-Theoretic Approach to Abstraction, [notes](./unsupervised/2018-07-group-theoretic-approach-to-abstraction.md)
