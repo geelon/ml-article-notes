@@ -23,6 +23,11 @@ Notes in chronological order: [archive](https://geelon.github.io/thesis-notes.ht
     - Chapter 10: Directed Graphical Models, [notes](./fundamentals/2012-MLPA-chapter-10.md)
 - [Ng Jordan](http://papers.nips.cc/paper/2020-on-discriminative-vs-generative-classifiers-a-comparison-of-logistic-regression-and-naive-bayes.pdf), On Discriminative vs. Generative classifiers: a comparison of logistic regression and naive Bayes, [notes](./fundamentals/ng-jordan.md)
 
+## Information Theory
+- [Csiszár 2004](https://users.renyi.hu/~csiszar/Publications/Information_Theory_and_Statistics:_A_Tutorial.pdf): Information Theory and Statistics, a tutorial
+     - Chapter 1: Preliminaries, [notes](./information-theory/2004-csiszar-info-theory-1.md)
+     - Chapter 2: Large deviations, hypothesis testing, [notes](./information-theory/2004-csiszar-info-theory-2.md)
+
 ## Statistics
 - [Minsker 2015](https://arxiv.org/abs/1308.1334): Geometric median and robust estimation in Banach spaces, [notes](./statistics/2015-geometric-median.md)
     
